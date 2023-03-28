@@ -101,4 +101,3 @@ const styles = StyleSheet.create({
     marginLeft: w / 15,
   },
 })
-

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, ToastAndroid } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ToastAndroid, Alert } from 'react-native';
 import * as MediaLibrary from "expo-media-library";
 import * as ECamera from "expo-camera";
 import * as ImagePicker from 'expo-image-picker';
@@ -234,4 +234,3 @@ const styles = StyleSheet.create({
     // height: "100%",
   },
 })
-
