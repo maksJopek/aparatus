@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dImg {
+      background-color: darkgray;
+      /* width: fit-content; */
+      width: 12rem;
+      padding: 10px;
+      border-radius: 20px;
+      margin-right: 25px;
+      margin-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media all and (max-width: 960px) {
+      .dImg {
+        width: 9rem;
+      }
+    }
+
+    .dImg * {
+      margin: 5px;
+    }
+
+    .dImg p {
+      overflow-wrap: anywhere;
+    }
+
+    .dImg input[type='checkbox'] {
+      width: 20px;
+      height: 20px;
+      display: inline;
+    }
+
+    .dImg img {
+      border-radius: 30px;
+      aspect-ratio: 1 / 1;
+    }
+
+    .dImg label {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h2>Uploaded Images:</h2>
+    <button type="button" onclick="getFiles()">Reload</button>
+    <button type="button" onclick="selectAll()">Select all</button>
+    <button type="button" onclick="removeAllSel()">Remove selected</button>
+  </header><br>
+  <div id="container"></div>
+</body>
+
+</html>
