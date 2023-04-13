@@ -9,7 +9,8 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-backend/static/upload/
+backend/static/upload/*
+!backend/static/upload/.gitkeep
 
 # macOS
 .DS_Store

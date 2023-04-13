@@ -1,6 +1,7 @@
 const express = require("express");
 const formidable = require('formidable');
 const fs = require("fs").promises
+const fss = require("fs")
 
 const app = express();
 app.use(express.static('static'))
@@ -40,7 +41,10 @@ app.post('/rename-file', async (req, res) => {
 app.get('/files', async (_, res) => {
   res.json(await fs.readdir(__dirname + '/static/upload'))
 });
+
+if (!fss.existsSync(uploadDir)){
+    fss.mkdirSync(uploadDir);
+}
 app.listen(PORT, () => {
   console.log("Server listening on port " + PORT);
 })
-

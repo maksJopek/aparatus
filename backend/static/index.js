@@ -1,6 +1,6 @@
 const newDiv = `<!-- <div class="dImg"> -->
       <p>$name</p><br>
-      <img src="upload/$name" alt="$name" width="120" height="120"/>
+      <a href="upload/$name"><img src="upload/$name" alt="$name" width="120" height="120"/></a>
       <button type="button" onclick="deleteFiles(['$name'])">Delete</button>
       <button type="button" onclick="renameFile('$name')">Rename</button><br>
       <label>
